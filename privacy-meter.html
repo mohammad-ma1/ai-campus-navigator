@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Risk Meter — AI Campus Navigator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">&#9906;</span>
+        <span><strong>AI Campus Navigator</strong><small>Student survival guide to LLMs</small></span>
+      </a>
+      <button class="menu-btn" aria-label="Open menu">&#9776;</button>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="journey.html">Journey</a>
+        <a href="prompt-battle.html">Prompts</a>
+        <a href="ethics.html">Ethics</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="compare.html">Compare</a>
+        <a href="survival-kit.html" class="dark">Survival Kit</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-head">
+      <span class="eyebrow">Stay safe</span>
+      <h1>Privacy Risk Meter</h1>
+      <p class="lead">Before you paste, think. Here&#x27;s how risky common student situations really are.</p>
+    </section>
+    <div class="tabs" data-target=".risk">
+      <button class="tab active" data-filter="all">All</button>
+      <button class="tab" data-filter="low">Low risk</button>
+      <button class="tab" data-filter="medium">Medium risk</button>
+      <button class="tab" data-filter="high">High risk</button>
+      <button class="tab" data-filter="very-high">Very high risk</button>
+    </div>
+    <div class="grid grid-3">
+      <div class="card risk low" data-group="low"><h3>Asking for an explanation of a public concept (e.g. Fourier transform)</h3><span class="badge low">LOW RISK</span><p class="muted">Totally fine — no personal data involved.</p></div>
+      <div class="card risk low" data-group="low"><h3>Pasting your own anonymous lecture notes</h3><span class="badge low">LOW RISK</span><p class="muted">Generally safe. Avoid notes that contain other students&#x27; names or grades.</p></div>
+      <div class="card risk low" data-group="low"><h3>Uploading a photo of your textbook page</h3><span class="badge low">LOW RISK</span><p class="muted">Usually OK for personal study. Don&#x27;t redistribute copyrighted content.</p></div>
+      <div class="card risk medium" data-group="medium"><h3>Pasting code from a class assignment</h3><span class="badge medium">MEDIUM RISK</span><p class="muted">Be careful — some courses forbid sharing assignment code. Check your policy.</p></div>
+      <div class="card risk medium" data-group="medium"><h3>Asking AI to improve a draft email to your professor</h3><span class="badge medium">MEDIUM RISK</span><p class="muted">OK if you remove names, IDs, and anything sensitive about others.</p></div>
+      <div class="card risk medium" data-group="medium"><h3>Uploading lecture slides from your university</h3><span class="badge medium">MEDIUM RISK</span><p class="muted">Often copyrighted. Acceptable for personal use, risky to publish or share.</p></div>
+      <div class="card risk high" data-group="high"><h3>Pasting a CV with your full address and phone number</h3><span class="badge high">HIGH RISK</span><p class="muted">Remove personal identifiers first. Use a generic placeholder address.</p></div>
+      <div class="card risk high" data-group="high"><h3>Sharing a friend&#x27;s project work without permission</h3><span class="badge high">HIGH RISK</span><p class="muted">Don&#x27;t share other people&#x27;s work. Get consent first.</p></div>
+      <div class="card risk high" data-group="high"><h3>Uploading screenshots that contain your email or login</h3><span class="badge high">HIGH RISK</span><p class="muted">Crop or blur all credentials before uploading anything.</p></div>
+      <div class="card risk very-high" data-group="very-high"><h3>Pasting a personal ID, passport, or student card number</h3><span class="badge very-high">VERY HIGH RISK</span><p class="muted">Never. This is high-value personal data — keep it offline.</p></div>
+      <div class="card risk very-high" data-group="very-high"><h3>Uploading medical records or mental health information</h3><span class="badge very-high">VERY HIGH RISK</span><p class="muted">Absolutely not. Even if it&#x27;s about you. Use professional, private channels.</p></div>
+      <div class="card risk very-high" data-group="very-high"><h3>Sharing unpublished research data from your lab</h3><span class="badge very-high">VERY HIGH RISK</span><p class="muted">Major academic risk. Always ask your supervisor before using AI on lab data.</p></div>
+    </div>
+    <section>
+      <div class="banner">
+        <h2>The one-question test</h2>
+        <p class="lead">Before you paste anything into an AI tool, ask: would I be OK posting this publicly?</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>AI Campus Navigator — a student survival guide to LLMs.</p>
+      <p>Built with HTML, CSS &amp; JavaScript in VS Code · Hosted on GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

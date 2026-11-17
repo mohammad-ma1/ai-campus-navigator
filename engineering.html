@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Engineering &amp; CS Examples — AI Campus Navigator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">&#9906;</span>
+        <span><strong>AI Campus Navigator</strong><small>Student survival guide to LLMs</small></span>
+      </a>
+      <button class="menu-btn" aria-label="Open menu">&#9776;</button>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="journey.html">Journey</a>
+        <a href="prompt-battle.html">Prompts</a>
+        <a href="ethics.html">Ethics</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="compare.html">Compare</a>
+        <a href="survival-kit.html" class="dark">Survival Kit</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-head">
+      <span class="eyebrow">For engineering &amp; CS students</span>
+      <h1>Engineering Examples</h1>
+      <p class="lead">46 concrete scenarios with copy-ready prompts — covering programming, electronics, embedded, signals, networking, AI projects, lab reports and more.</p>
+    </section>
+    <div class="tabs" data-target=".eng-group">
+      <button class="tab active" data-filter="all">All</button>
+      <button class="tab" data-filter="c0">Programming &amp; Algorithms</button>
+      <button class="tab" data-filter="c1">Debugging &amp; Errors</button>
+      <button class="tab" data-filter="c2">Electronics &amp; Circuits</button>
+      <button class="tab" data-filter="c3">Embedded Systems &amp; MCUs</button>
+      <button class="tab" data-filter="c4">Math, Signals &amp; Control</button>
+      <button class="tab" data-filter="c5">Networking &amp; Operating Systems</button>
+      <button class="tab" data-filter="c6">Databases &amp; Data</button>
+      <button class="tab" data-filter="c7">AI / ML Projects</button>
+      <button class="tab" data-filter="c8">Final-Year Projects &amp; Theses</button>
+      <button class="tab" data-filter="c9">Git, Tooling &amp; Productivity</button>
+      <button class="tab" data-filter="c10">Cybersecurity Basics</button>
+      <button class="tab" data-filter="c11">Lab Reports &amp; Presentations</button>
+    </div>
+    <section class="eng-group" data-group="c0">
+      <h2>Programming &amp; Algorithms</h2>
+      <div class="grid grid-2">
+        <div class="card"><h3>Explain a data structure with code</h3><p class="muted">You&#x27;re stuck on hash tables for your DSA class.</p><div class="prompt">Explain hash tables to a 2nd-year CS student. Include collision handling (chaining vs open addressing), Big-O for insert/lookup, and a 20-line Python example with comments.</div></div>
+        <div class="card"><h3>Trace through an algorithm step by step</h3><p class="muted">You need to understand why quicksort behaves the way it does.</p><div class="prompt">Trace quicksort on the array [9,3,7,1,8,2,5] step by step. Show the partition at each level and the final recursion tree. Use a code block.</div></div>
+        <div class="card"><h3>Compare two algorithms</h3><p class="muted">Choosing between BFS and DFS for a graph project.</p><div class="prompt">Compare BFS and DFS for a CS student in a table: use cases, memory, time complexity, when each fails, and one short Python example for each.</div></div>
+        <div class="card"><h3>Improve a solution&#x27;s complexity</h3><p class="muted">Your O(n²) loop is too slow for the test cases.</p><div class="prompt">Here is my O(n²) solution. Suggest an O(n log n) or O(n) approach. Explain the idea first, then show the optimized code with comments. Code:
+…</div></div>
+      </div>
+    </section>
+    <section class="eng-group" data-group="c1">
+      <h2>Debugging &amp; Errors</h2>
+      <div class="grid grid-2">
+        <div class="card"><h3>Debug a C segfault</h3><p class="muted">Your C program crashes only with large input.</p><div class="prompt">My C program segfaults when n &gt; 100. Walk me through likely causes (stack overflow, off-by-one, malloc failure, pointer aliasing). Suggest 3 things to check, in order. Code:
+…</div></div>
+        <div class="card"><h3>Decode a Python traceback</h3><p class="muted">You get a long red error in your data project.</p><div class="prompt">Explain this Python traceback in plain English. What does each line mean? What&#x27;s the most likely root cause and the first fix to try?
+
+Traceback:
+…</div></div>
+        <div class="card"><h3>Diagnose a linker error</h3><p class="muted">Linker errors after refactoring your project.</p><div class="prompt">I&#x27;m getting &#x27;undefined reference to X&#x27; when linking. List the 5 most common causes for a CS student, in order of likelihood, with how to verify each.</div></div>
+        <div class="card"><h3>Read a compiler warning</h3><p class="muted">GCC complains about implicit conversions.</p><div class="prompt">Explain this gcc warning to a beginner, why it matters, and the safest way to fix it without hiding the issue:
+…</div></div>
+      </div>
+    </section>
+    <section class="eng-group" data-group="c2">
+      <h2>Electronics &amp; Circuits</h2>
+      <div class="grid grid-2">
+        <div class="card"><h3>Analyze a schematic from a photo</h3><p class="muted">You took a phone picture of your breadboard.</p><div class="prompt">Look at this circuit photo. Identify each component and its likely role, list possible wiring mistakes, and suggest how to test it safely with a multimeter. [attach image]</div></div>
+        <div class="card"><h3>Choose a resistor value</h3><p class="muted">Driving an LED from a 5V microcontroller pin.</p><div class="prompt">I want to drive a red LED (Vf ≈ 2V, If ≈ 15mA) from a 5V GPIO pin. Show the resistor calculation step by step, the closest E12 value, and the power dissipation.</div></div>
+        <div class="card"><h3>Explain an op-amp configuration</h3><p class="muted">Lab on inverting amplifiers next week.</p><div class="prompt">Explain an inverting op-amp configuration to an electronics student. Derive the gain formula, draw the schematic in ASCII, and give one practical sensor example.</div></div>
+        <div class="card"><h3>Pick a transistor for switching</h3><p class="muted">Switching a small DC motor from an Arduino.</p><div class="prompt">I want to switch a 6V, 300mA DC motor from an Arduino digital pin. Recommend BJT vs MOSFET, give one common part number, draw the circuit (with flyback diode), and explain each component&#x27;s purpose.</div></div>
+      </div>
+    </section>
+    <section class="eng-group" data-group="c3">
+      <h2>Embedded Systems &amp; MCUs</h2>
+      <div class="grid grid-2">
+        <div class="card"><h3>Generate Arduino starter code</h3><p class="muted">First time using a new peripheral.</p><div class="prompt">Write minimal Arduino code to read a DHT22 sensor every 2s and print temperature + humidity to Serial. Add comments explaining each line for a beginner.</div></div>
+        <div class="card"><h3>Debug an interrupt that never fires</h3><p class="muted">Your timer ISR never runs.</p><div class="prompt">My ESP32 timer interrupt never triggers. List the top 8 reasons (clock source, prescaler, IRAM_ATTR, interrupt enable, priority…), in order of likelihood, with how to check each.</div></div>
+        <div class="card"><h3>Decode a datasheet section</h3><p class="muted">The datasheet feels like a wall of acronyms.</p><div class="prompt">Summarize this datasheet section for a 3rd-year electronics student. Highlight: pinout, key timing constraints, typical use circuit, and any &#x27;gotchas&#x27;. Section:
+…</div></div>
+        <div class="card"><h3>Pick the right communication protocol</h3><p class="muted">Connecting two boards over a short distance.</p><div class="prompt">Compare UART, SPI, I²C, and CAN for a student project. Cover speed, wires, distance, multi-master, and best-fit example. Use a table.</div></div>
+      </div>
+    </section>
+    <section class="eng-group" data-group="c4">
+      <h2>Math, Signals &amp; Control</h2>
+      <div class="grid grid-2">
+        <div class="card"><h3>Intuition before the formula</h3><p class="muted">Fourier transforms feel abstract.</p><div class="prompt">Give me the intuition behind the Fourier transform before any math. Use a simple analogy, then introduce the formula and explain each symbol. Audience: 2nd-year engineering.</div></div>
+        <div class="card"><h3>Solve a Laplace problem with steps</h3><p class="muted">Stuck on a transfer function exercise.</p><div class="prompt">Solve this Laplace transform problem step by step, showing every algebra step. Then summarize the technique in 3 bullet points. Problem:
+…</div></div>
+        <div class="card"><h3>Tune a PID controller</h3><p class="muted">Your motor oscillates around the setpoint.</p><div class="prompt">Explain PID tuning to an engineering student. Cover Ziegler-Nichols, what each gain does intuitively, common failure modes (overshoot, integral windup), and a practical tuning checklist.</div></div>
+        <div class="card"><h3>Sanity-check a derivation</h3><p class="muted">Make sure your homework derivation is correct.</p><div class="prompt">Check this derivation step by step. Point out any algebra mistakes or unjustified steps, and confirm the final result. Don&#x27;t redo the whole thing unless needed.
+…</div></div>
+      </div>
+    </section>
+    <section class="eng-group" data-group="c5">
+      <h2>Networking &amp; Operating Systems</h2>
+      <div class="grid grid-2">
+        <div class="card"><h3>Visualize the TCP handshake</h3><p class="muted">Networking exam next week.</p><div class="prompt">Explain the TCP 3-way handshake with an ASCII sequence diagram. Then list what can go wrong (SYN flood, RST, retransmit) for an exam answer.</div></div>
+        <div class="card"><h3>Subnetting practice</h3><p class="muted">Subnetting still feels confusing.</p><div class="prompt">Give me 5 progressively harder subnetting problems with answers hidden at the bottom. After I answer, give a short explanation per question.</div></div>
+        <div class="card"><h3>Explain a Linux command pipeline</h3><p class="muted">You found a one-liner online and want to understand it.</p><div class="prompt">Explain this shell pipeline command by command, like I&#x27;m a CS student. Note any risks before I run it.
+
+Command:
+…</div></div>
+        <div class="card"><h3>Process vs thread vs coroutine</h3><p class="muted">OS midterm review.</p><div class="prompt">Compare processes, threads, and coroutines for an OS exam. Use a table with: memory, scheduling, communication, when to use, and one programming-language example each.</div></div>
+      </div>
+    </section>
+    <section class="eng-group" data-group="c6">
+      <h2>Databases &amp; Data</h2>
+      <div class="grid grid-2">
+        <div class="card"><h3>Design a database schema</h3><p class="muted">Final-year project: a course registration app.</p><div class="prompt">Design a normalized SQL schema for a university course registration system. Include tables, keys, relationships, and 3 example queries. Mention which form of normalization you reached.</div></div>
+        <div class="card"><h3>Optimize a slow SQL query</h3><p class="muted">A report query takes 30s.</p><div class="prompt">This SQL query is slow. Explain why, suggest indexes, and propose a rewritten query. Don&#x27;t change the result. Query:
+…</div></div>
+        <div class="card"><h3>Analyze lab/survey data</h3><p class="muted">You collected 200 rows in a CSV.</p><div class="prompt">Here&#x27;s a CSV of survey responses. Suggest 3 interesting questions the data could answer, the right chart for each, and Python (pandas + matplotlib) code to produce them. CSV:
+…</div></div>
+        <div class="card"><h3>Explain a statistical concept</h3><p class="muted">Confidence intervals confuse you.</p><div class="prompt">Explain 95% confidence intervals to an engineering student. Use one real-world example, the formula, and a common misconception to avoid.</div></div>
+      </div>
+    </section>
+    <section class="eng-group" data-group="c7">
+      <h2>AI / ML Projects</h2>
+      <div class="grid grid-2">
+        <div class="card"><h3>Pick a model for your project</h3><p class="muted">Image classification project, small dataset.</p><div class="prompt">I have ~500 labeled images across 5 classes. Recommend 3 model approaches (from-scratch CNN, transfer learning, zero-shot with CLIP). Compare expected accuracy, training time on a free Colab GPU, and effort.</div></div>
+        <div class="card"><h3>Read a research paper</h3><p class="muted">Assigned to summarize a paper.</p><div class="prompt">Summarize this AI paper for a final-year student. Sections: problem, key idea, method (in plain words), results, limitations, and 2 follow-up questions. Paper:
+…</div></div>
+        <div class="card"><h3>Plan an ML pipeline</h3><p class="muted">Your project lacks structure.</p><div class="prompt">Design a clean ML pipeline for [predicting student dropout]. Steps from data collection to deployment, with the right tool for each step and likely pitfalls.</div></div>
+        <div class="card"><h3>Debug a training run</h3><p class="muted">Loss decreases on train, not on val.</p><div class="prompt">My validation loss is much higher than training loss after 5 epochs. List the 6 most likely causes for a beginner, in order, with how to test each and a fix.</div></div>
+      </div>
+    </section>
+    <section class="eng-group" data-group="c8">
+      <h2>Final-Year Projects &amp; Theses</h2>
+      <div class="grid grid-2">
+        <div class="card"><h3>Brainstorm project ideas</h3><p class="muted">You need to propose a topic next week.</p><div class="prompt">Suggest 10 final-year project ideas combining [embedded systems] and [machine learning] for a computer engineering student. For each: difficulty (1-5), key skills required, main risks, and one related paper to read.</div></div>
+        <div class="card"><h3>Write a project proposal</h3><p class="muted">You have an idea but not a structure.</p><div class="prompt">Help me draft a 1-page project proposal on [topic]. Sections: motivation, problem statement, objectives, methodology, deliverables, timeline (12 weeks), risks.</div></div>
+        <div class="card"><h3>Plan a 12-week schedule</h3><p class="muted">You always run out of time at the end.</p><div class="prompt">Create a 12-week plan for my final-year project &#x27;[title]&#x27;. Include weekly deliverables, milestones, buffer weeks, and what to do if [main risk] happens.</div></div>
+        <div class="card"><h3>Improve your thesis writing</h3><p class="muted">Your supervisor says it&#x27;s too informal.</p><div class="prompt">Rewrite this thesis paragraph in a clear academic style. Keep my arguments and references intact. Show what you changed and why. Paragraph:
+…</div></div>
+      </div>
+    </section>
+    <section class="eng-group" data-group="c9">
+      <h2>Git, Tooling &amp; Productivity</h2>
+      <div class="grid grid-2">
+        <div class="card"><h3>Recover from a Git mistake</h3><p class="muted">You committed to the wrong branch.</p><div class="prompt">I just committed 3 changes to main instead of my feature branch. Walk me through fixing this safely with git, step by step. Mention what NOT to do.</div></div>
+        <div class="card"><h3>Resolve a merge conflict</h3><p class="muted">Working on a team project.</p><div class="prompt">Explain how to read and resolve this merge conflict marker for a CS student. What does HEAD vs the other side mean? Conflict:
+…</div></div>
+        <div class="card"><h3>Set up a clean dev environment</h3><p class="muted">New laptop, new project.</p><div class="prompt">Recommend a clean Python + Git + VS Code setup for a CS student on Windows. Include venv, formatter, linter, and one productivity extension per category.</div></div>
+        <div class="card"><h3>Write better commit messages</h3><p class="muted">Your project history is messy.</p><div class="prompt">Show me a good commit message convention (Conventional Commits) with 5 examples for a student project, including a fix, feature, refactor, docs, and chore.</div></div>
+      </div>
+    </section>
+    <section class="eng-group" data-group="c10">
+      <h2>Cybersecurity Basics</h2>
+      <div class="grid grid-2">
+        <div class="card"><h3>Spot vulnerabilities in code</h3><p class="muted">Your web project asks for user input.</p><div class="prompt">Review this small login handler for common vulnerabilities (SQLi, XSS, weak hashing, missing rate limit). Explain each issue and the minimal safe fix. Code:
+…</div></div>
+        <div class="card"><h3>Understand a CTF challenge</h3><p class="muted">Stuck on a &#x27;reverse engineering&#x27; challenge.</p><div class="prompt">Explain how to approach this beginner reverse-engineering CTF challenge step by step, without giving the final flag. Hint at the tools to use.</div></div>
+        <div class="card"><h3>Hashing vs encryption vs encoding</h3><p class="muted">Frequently mixed up in exams.</p><div class="prompt">Compare hashing, encryption, and encoding for a CS student. Use a table with purpose, reversibility, key example, and one common misuse.</div></div>
+      </div>
+    </section>
+    <section class="eng-group" data-group="c11">
+      <h2>Lab Reports &amp; Presentations</h2>
+      <div class="grid grid-2">
+        <div class="card"><h3>Structure a lab report</h3><p class="muted">First lab report of the semester.</p><div class="prompt">Outline a lab report on [Ohm&#x27;s law verification] for a 1st-year engineering student. Sections, what each should contain, and 2 things students often forget.</div></div>
+        <div class="card"><h3>Turn results into a presentation</h3><p class="muted">You have raw notes, no slides.</p><div class="prompt">Turn the following lab notes into a 10-slide presentation outline with titles, 3 bullets per slide, and short speaker notes. Notes:
+…</div></div>
+        <div class="card"><h3>Prepare for the oral defense</h3><p class="muted">Your defense is next week.</p><div class="prompt">Act as a professor. Ask me 8 hard but fair questions on a project about [topic]. Wait for each answer, then give feedback and a model answer.</div></div>
+      </div>
+    </section>
+    <section>
+      <div class="banner">
+        <h2>Tip: stack your prompts</h2>
+        <p class="lead">Engineering problems usually have multiple layers. Start with intuition &rarr; ask for math &rarr; ask for a code example &rarr; ask for edge cases &rarr; ask the AI to quiz you. Each step deepens your understanding.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>AI Campus Navigator — a student survival guide to LLMs.</p>
+      <p>Built with HTML, CSS &amp; JavaScript in VS Code · Hosted on GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

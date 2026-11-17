@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Ethics Traffic Light — AI Campus Navigator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">&#9906;</span>
+        <span><strong>AI Campus Navigator</strong><small>Student survival guide to LLMs</small></span>
+      </a>
+      <button class="menu-btn" aria-label="Open menu">&#9776;</button>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="journey.html">Journey</a>
+        <a href="prompt-battle.html">Prompts</a>
+        <a href="ethics.html">Ethics</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="compare.html">Compare</a>
+        <a href="survival-kit.html" class="dark">Survival Kit</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-head">
+      <span class="eyebrow">AI Ethics</span>
+      <h1>The AI Traffic Light</h1>
+      <p class="lead">A simple way to know what&#x27;s OK, what&#x27;s risky, and what&#x27;s a clear no.</p>
+    </section>
+    <div class="tabs" data-target=".light-group">
+      <button class="tab active" data-filter="all">All</button>
+      <button class="tab" data-filter="go">&#128994; GO</button>
+      <button class="tab" data-filter="caution">&#128993; CAUTION</button>
+      <button class="tab" data-filter="stop">&#128308; STOP</button>
+    </div>
+    <div class="light-group" data-group="go">
+      <h2><span class="dot go"></span>GO — Responsible use</h2>
+      <div class="grid grid-2">
+        <div class="card"><h3>Ask AI to explain a concept you don&#x27;t understand.</h3><p class="muted">Pure learning — you still do the thinking.</p></div>
+        <div class="card"><h3>Use AI to generate practice questions.</h3><p class="muted">Active recall is one of the best ways to study.</p></div>
+        <div class="card"><h3>Ask AI to summarize a paper before you read it.</h3><p class="muted">Helps you orient yourself, then read deeply.</p></div>
+        <div class="card"><h3>Have AI quiz you on a topic.</h3><p class="muted">Self-testing improves long-term memory.</p></div>
+      </div>
+    </div>
+    <div class="light-group" data-group="caution">
+      <h2><span class="dot caution"></span>CAUTION — Be careful</h2>
+      <div class="grid grid-2">
+        <div class="card"><h3>Ask AI to improve your draft.</h3><p class="muted">OK if you keep your voice, ideas, and the work is yours. Cite AI assistance if your course requires.</p></div>
+        <div class="card"><h3>Use AI to debug your code.</h3><p class="muted">Fine for learning. Make sure you understand the fix — don&#x27;t paste blindly.</p></div>
+        <div class="card"><h3>Use AI for translation in homework.</h3><p class="muted">Useful, but check accuracy. Some courses see translated answers as borderline.</p></div>
+        <div class="card"><h3>Use AI to brainstorm ideas for a project.</h3><p class="muted">Great for inspiration. Choose and refine ideas yourself.</p></div>
+      </div>
+    </div>
+    <div class="light-group" data-group="stop">
+      <h2><span class="dot stop"></span>STOP — Unethical / not allowed</h2>
+      <div class="grid grid-2">
+        <div class="card"><h3>Submit an AI-generated essay as your own work.</h3><p class="muted">Plagiarism in most universities — even if rephrased.</p></div>
+        <div class="card"><h3>Use AI during an exam without permission.</h3><p class="muted">Academic dishonesty. Always check exam rules.</p></div>
+        <div class="card"><h3>Have AI write your final-year thesis.</h3><p class="muted">Defeats the purpose of the degree. High risk of being caught.</p></div>
+        <div class="card"><h3>Paste a classmate&#x27;s work into AI without consent.</h3><p class="muted">Privacy violation and possibly academic misconduct.</p></div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>AI Campus Navigator — a student survival guide to LLMs.</p>
+      <p>Built with HTML, CSS &amp; JavaScript in VS Code · Hosted on GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

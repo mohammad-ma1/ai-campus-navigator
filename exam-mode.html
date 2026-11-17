@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exam Prep Mode — AI Campus Navigator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">&#9906;</span>
+        <span><strong>AI Campus Navigator</strong><small>Student survival guide to LLMs</small></span>
+      </a>
+      <button class="menu-btn" aria-label="Open menu">&#9776;</button>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="journey.html">Journey</a>
+        <a href="prompt-battle.html">Prompts</a>
+        <a href="ethics.html">Ethics</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="compare.html">Compare</a>
+        <a href="survival-kit.html" class="dark">Survival Kit</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-head">
+      <span class="eyebrow">Exam Prep Mode</span>
+      <h1>What kind of help do you need today?</h1>
+      <p class="lead">Pick a mode. Get prompts that actually work for studying.</p>
+    </section>
+    <div class="tabs" data-target=".mode">
+      <button class="tab active" data-filter="explain">Explain a topic</button>
+      <button class="tab" data-filter="flashcards">Make flashcards</button>
+      <button class="tab" data-filter="practice">Practice questions</button>
+      <button class="tab" data-filter="quiz">Quiz me</button>
+      <button class="tab" data-filter="summarize">Summarize my notes</button>
+    </div>
+    <div class="card mode game" data-group="explain">
+      <h2>Explain a topic</h2>
+      <p class="muted">Make a hard concept click in 3 minutes.</p>
+      <div style="display:flex;gap:12px;align-items:flex-start"><div class="num">1</div><div style="flex:1"><div class="prompt">Explain [topic] to a 1st-year engineering student. Use a simple analogy, then a 4-line summary.</div></div></div>
+      <div style="display:flex;gap:12px;align-items:flex-start"><div class="num">2</div><div style="flex:1"><div class="prompt">Re-explain [topic] but this time go one level deeper. Add the math.</div></div></div>
+      <div style="display:flex;gap:12px;align-items:flex-start"><div class="num">3</div><div style="flex:1"><div class="prompt">Where do students usually get [topic] wrong? List the 3 most common misconceptions.</div></div></div>
+    </div>
+    <div class="card mode game" data-group="flashcards" style="display:none">
+      <h2>Make flashcards</h2>
+      <p class="muted">Turn your notes into active-recall cards.</p>
+      <div style="display:flex;gap:12px;align-items:flex-start"><div class="num">1</div><div style="flex:1"><div class="prompt">Turn these notes into 20 flashcards. Question on one side, a short answer on the other. Notes: …</div></div></div>
+      <div style="display:flex;gap:12px;align-items:flex-start"><div class="num">2</div><div style="flex:1"><div class="prompt">Make 10 flashcards on [topic] focusing only on definitions and formulas.</div></div></div>
+      <div style="display:flex;gap:12px;align-items:flex-start"><div class="num">3</div><div style="flex:1"><div class="prompt">From these flashcards, which 5 are most likely to appear on an exam? Why?</div></div></div>
+    </div>
+    <div class="card mode game" data-group="practice" style="display:none">
+      <h2>Practice questions</h2>
+      <p class="muted">Train on problems like the real exam.</p>
+      <div style="display:flex;gap:12px;align-items:flex-start"><div class="num">1</div><div style="flex:1"><div class="prompt">Generate 10 practice questions on [topic] with progressive difficulty. Hide the solutions at the end.</div></div></div>
+      <div style="display:flex;gap:12px;align-items:flex-start"><div class="num">2</div><div style="flex:1"><div class="prompt">Here is a past exam question. Make 3 similar questions with different numbers: …</div></div></div>
+      <div style="display:flex;gap:12px;align-items:flex-start"><div class="num">3</div><div style="flex:1"><div class="prompt">Give me one hard problem on [topic]. Don&#x27;t show the solution until I try.</div></div></div>
+    </div>
+    <div class="card mode game" data-group="quiz" style="display:none">
+      <h2>Quiz me</h2>
+      <p class="muted">Let the AI test you, one question at a time.</p>
+      <div style="display:flex;gap:12px;align-items:flex-start"><div class="num">1</div><div style="flex:1"><div class="prompt">Quiz me on [chapter]. One question at a time. Tell me if I&#x27;m right and why.</div></div></div>
+      <div style="display:flex;gap:12px;align-items:flex-start"><div class="num">2</div><div style="flex:1"><div class="prompt">Ask me 5 conceptual &#x27;why&#x27; questions about [topic]. Rate my answers from 1 to 5.</div></div></div>
+      <div style="display:flex;gap:12px;align-items:flex-start"><div class="num">3</div><div style="flex:1"><div class="prompt">Act as my professor in an oral exam on [topic]. Ask follow-up questions when my answer is weak.</div></div></div>
+    </div>
+    <div class="card mode game" data-group="summarize" style="display:none">
+      <h2>Summarize my notes</h2>
+      <p class="muted">Compress a semester into one page.</p>
+      <div style="display:flex;gap:12px;align-items:flex-start"><div class="num">1</div><div style="flex:1"><div class="prompt">Summarize my notes into key points, definitions, and 5 likely exam questions. Notes: …</div></div></div>
+      <div style="display:flex;gap:12px;align-items:flex-start"><div class="num">2</div><div style="flex:1"><div class="prompt">Create a one-page cheat sheet of formulas for [course], grouped by topic.</div></div></div>
+      <div style="display:flex;gap:12px;align-items:flex-start"><div class="num">3</div><div style="flex:1"><div class="prompt">Compare my summary with these lecture notes. What important points did I miss?</div></div></div>
+    </div>
+    <section>
+      <div class="card game">
+        <h3>Build a full study session</h3>
+        <p class="muted">Combine modes: explain &rarr; flashcards &rarr; quiz &rarr; summarize.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>AI Campus Navigator — a student survival guide to LLMs.</p>
+      <p>Built with HTML, CSS &amp; JavaScript in VS Code · Hosted on GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

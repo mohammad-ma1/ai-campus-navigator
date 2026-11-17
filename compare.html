@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compare AI Tools — AI Campus Navigator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">&#9906;</span>
+        <span><strong>AI Campus Navigator</strong><small>Student survival guide to LLMs</small></span>
+      </a>
+      <button class="menu-btn" aria-label="Open menu">&#9776;</button>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="journey.html">Journey</a>
+        <a href="prompt-battle.html">Prompts</a>
+        <a href="ethics.html">Ethics</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="compare.html">Compare</a>
+        <a href="survival-kit.html" class="dark">Survival Kit</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-head">
+      <span class="eyebrow">Section 5</span>
+      <h1>Compare AI Tools</h1>
+      <p class="lead">A quick side-by-side. Use it to pick the right tool for the right job.</p>
+    </section>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Tool</th><th>Company / family</th><th>Strengths</th><th>Limits</th><th>Best for students</th><th>Privacy notes</th><th>Beginner</th></tr></thead>
+        <tbody>
+          <tr><td>ChatGPT</td><td>OpenAI / GPT</td><td>All-rounder, files, voice, image gen, coding</td><td>Best features need paid plan</td><td>General studying, writing, coding help</td><td>Don&#x27;t paste private/personal data</td><td style="color:#d97706">★★★★★</td></tr>
+          <tr><td>Claude</td><td>Anthropic / Claude</td><td>Long PDFs, careful writing, reasoning</td><td>No image generation; fewer features in free tier</td><td>Reading long papers, essay drafts, code refactor</td><td>Avoid uploading confidential files</td><td style="color:#d97706">★★★★★</td></tr>
+          <tr><td>Gemini</td><td>Google / Gemini</td><td>Google Docs/Drive integration, multimodal</td><td>Quality varies by task</td><td>Working in Google ecosystem</td><td>Check what you allow it to read</td><td style="color:#d97706">★★★★☆</td></tr>
+          <tr><td>Copilot (M365)</td><td>Microsoft / GPT</td><td>Lives inside Word/Excel/Outlook</td><td>Best with M365 license</td><td>Office documents, emails, slides</td><td>Enterprise version safer than personal</td><td style="color:#d97706">★★★★☆</td></tr>
+          <tr><td>Perplexity</td><td>Perplexity / Mixed</td><td>Always cites sources</td><td>Shorter answers, less creative</td><td>Research, finding references</td><td>Public queries by default — beware</td><td style="color:#d97706">★★★★★</td></tr>
+          <tr><td>Grok</td><td>xAI / Grok</td><td>Live X content, casual</td><td>Tone can be unprofessional</td><td>Trending topics, news pulse</td><td>Tied to your X account</td><td style="color:#d97706">★★★☆☆</td></tr>
+          <tr><td>DeepSeek</td><td>DeepSeek</td><td>Strong reasoning, low cost / open</td><td>Hosted in China — check policies</td><td>Math, logic, coding on a budget</td><td>Avoid sensitive data</td><td style="color:#d97706">★★★☆☆</td></tr>
+          <tr><td>Qwen</td><td>Alibaba / Qwen</td><td>Multilingual, open weights</td><td>UI less polished in some apps</td><td>Studying in multiple languages</td><td>Same caution as above</td><td style="color:#d97706">★★★☆☆</td></tr>
+          <tr><td>Llama</td><td>Meta / Llama</td><td>Open weights, run locally</td><td>Need a host or app to use it</td><td>Privacy-friendly local use</td><td>Best privacy if self-hosted</td><td style="color:#d97706">★★☆☆☆</td></tr>
+          <tr><td>Mistral</td><td>Mistral AI</td><td>Efficient, EU-based</td><td>Smaller ecosystem of features</td><td>EU privacy needs</td><td>Good EU options</td><td style="color:#d97706">★★★☆☆</td></tr>
+          <tr><td>GitHub Copilot</td><td>GitHub / GPT etc.</td><td>Autocomplete in your IDE</td><td>Not a chat tutor</td><td>Writing code while you code</td><td>Can be set to not train on your code</td><td style="color:#d97706">★★★★☆</td></tr>
+          <tr><td>Cursor</td><td>Anysphere</td><td>AI-first code editor, multi-file edits</td><td>Paid for serious use</td><td>Bigger coding projects</td><td>Choose privacy mode in settings</td><td style="color:#d97706">★★★★☆</td></tr>
+          <tr><td>Lovable</td><td>Lovable</td><td>Build full web apps from chat</td><td>Less control than raw coding</td><td>Final-year demos, prototypes</td><td>Don&#x27;t put real user data in test apps</td><td style="color:#d97706">★★★★★</td></tr>
+          <tr><td>Replit</td><td>Replit</td><td>Cloud IDE + AI agent</td><td>Free tier limited</td><td>Quick scripts, run anywhere</td><td>Public projects by default on free</td><td style="color:#d97706">★★★★☆</td></tr>
+          <tr><td>Bolt</td><td>StackBlitz</td><td>Browser-based prototyping</td><td>Less suited to long-term apps</td><td>Hackathon-style demos</td><td>Same as above</td><td style="color:#d97706">★★★★☆</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="muted" style="text-align:center">Always confirm features and pricing on each tool's official website — they change often.</p>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>AI Campus Navigator — a student survival guide to LLMs.</p>
+      <p>Built with HTML, CSS &amp; JavaScript in VS Code · Hosted on GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

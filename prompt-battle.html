@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prompt Battle — AI Campus Navigator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">&#9906;</span>
+        <span><strong>AI Campus Navigator</strong><small>Student survival guide to LLMs</small></span>
+      </a>
+      <button class="menu-btn" aria-label="Open menu">&#9776;</button>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="journey.html">Journey</a>
+        <a href="prompt-battle.html">Prompts</a>
+        <a href="ethics.html">Ethics</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="compare.html">Compare</a>
+        <a href="survival-kit.html" class="dark">Survival Kit</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-head">
+      <span class="eyebrow">Prompt Battle</span>
+      <h1>Weak Prompt vs <span class="grad-text">Strong Prompt</span></h1>
+      <p class="lead">Same question, very different answers. The prompt is the experiment — improve it and your AI gets smarter.</p>
+    </section>
+    <div class="grid">
+      <div class="card">
+        <div class="station-label">BATTLE #1</div>
+        <h3>Math concept</h3>
+        <div class="battle">
+          <div class="weak"><div class="tag">WEAK</div><p>Explain calculus.</p></div>
+          <div class="strong"><div class="tag">STRONG</div><div class="prompt">Explain derivatives to a first-year engineering student using a real-life example (e.g. car speed). Then give me 3 practice questions with hidden solutions.</div></div>
+        </div>
+        <p class="why"><strong>Why it wins:</strong> Names the level, the concept, the example, and the exact output you want.</p>
+      </div>
+      <div class="card">
+        <div class="station-label">BATTLE #2</div>
+        <h3>Code debugging</h3>
+        <div class="battle">
+          <div class="weak"><div class="tag">WEAK</div><p>Fix my code.</p></div>
+          <div class="strong"><div class="tag">STRONG</div><div class="prompt">Help me debug this Python function. Walk through the bug step by step. Don&#x27;t rewrite the whole thing — just fix the problem and explain why.
+
+```python
+…
+```</div></div>
+        </div>
+        <p class="why"><strong>Why it wins:</strong> Says what to do, what NOT to do, and gives the actual code.</p>
+      </div>
+      <div class="card">
+        <div class="station-label">BATTLE #3</div>
+        <h3>Summarizing</h3>
+        <div class="battle">
+          <div class="weak"><div class="tag">WEAK</div><p>Summarize this paper.</p></div>
+          <div class="strong"><div class="tag">STRONG</div><div class="prompt">Summarize this paper for a final-year CS student. Use 5 sections: problem, method (in plain words), results, limitations, and 2 questions I should ask in class. Paper:
+…</div></div>
+        </div>
+        <p class="why"><strong>Why it wins:</strong> Defines the audience, structure, length, and the angle.</p>
+      </div>
+      <div class="card">
+        <div class="station-label">BATTLE #4</div>
+        <h3>Study planning</h3>
+        <div class="battle">
+          <div class="weak"><div class="tag">WEAK</div><p>Help me prepare for my exam.</p></div>
+          <div class="strong"><div class="tag">STRONG</div><div class="prompt">Make a 7-day study plan for my Signals &amp; Systems midterm. I have 3 hours per day. Mix new topics, review, and practice problems. Prioritize topics I&#x27;m weak on: convolution and Fourier series.</div></div>
+        </div>
+        <p class="why"><strong>Why it wins:</strong> Includes time budget, topics, weaknesses, and the desired mix of activities.</p>
+      </div>
+      <div class="card">
+        <div class="station-label">BATTLE #5</div>
+        <h3>Writing</h3>
+        <div class="battle">
+          <div class="weak"><div class="tag">WEAK</div><p>Improve this paragraph.</p></div>
+          <div class="strong"><div class="tag">STRONG</div><div class="prompt">Improve the clarity and grammar of this paragraph. Keep my voice and arguments. Show what you changed and why, in a short list. Don&#x27;t add new content. Paragraph:
+…</div></div>
+        </div>
+        <p class="why"><strong>Why it wins:</strong> Sets boundaries: what to keep, what to change, what NOT to add.</p>
+      </div>
+      <div class="card">
+        <div class="station-label">BATTLE #6</div>
+        <h3>Brainstorming</h3>
+        <div class="battle">
+          <div class="weak"><div class="tag">WEAK</div><p>Give me project ideas.</p></div>
+          <div class="strong"><div class="tag">STRONG</div><div class="prompt">Suggest 10 final-year project ideas combining IoT and machine learning for a computer engineering student. For each: difficulty (1–5), key skills, main risk, one related paper.</div></div>
+        </div>
+        <p class="why"><strong>Why it wins:</strong> Specifies count, domain, audience, and structured output.</p>
+      </div>
+    </div>
+    <section>
+      <div class="section-title"><h2>The 5 ingredients of a strong prompt</h2></div>
+      <div class="grid grid-3">
+        <div class="card"><div class="num">1</div><h3>Audience</h3><p class="muted">Who is this for?</p></div>
+        <div class="card"><div class="num">2</div><h3>Goal</h3><p class="muted">What should it produce?</p></div>
+        <div class="card"><div class="num">3</div><h3>Format</h3><p class="muted">Bullets, table, code…</p></div>
+        <div class="card"><div class="num">4</div><h3>Constraints</h3><p class="muted">What NOT to do.</p></div>
+        <div class="card"><div class="num">5</div><h3>Context</h3><p class="muted">Paste the actual material.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>AI Campus Navigator — a student survival guide to LLMs.</p>
+      <p>Built with HTML, CSS &amp; JavaScript in VS Code · Hosted on GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choose Your Journey — AI Campus Navigator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">&#9906;</span>
+        <span><strong>AI Campus Navigator</strong><small>Student survival guide to LLMs</small></span>
+      </a>
+      <button class="menu-btn" aria-label="Open menu">&#9776;</button>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="journey.html">Journey</a>
+        <a href="prompt-battle.html">Prompts</a>
+        <a href="ethics.html">Ethics</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="compare.html">Compare</a>
+        <a href="survival-kit.html" class="dark">Survival Kit</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-head">
+      <span class="eyebrow">Choose your path</span>
+      <h1>Choose Your AI Study Journey</h1>
+      <p class="lead">Pick the goal that fits you right now. We&#x27;ll show you the right tools, tips, and prompts.</p>
+    </section>
+    <div class="grid grid-4" id="path-buttons">
+      <button class="card option" data-path="study"><h3>I want to study smarter</h3><p class="muted">Use AI as a personal tutor — without skipping the learning.</p></button>
+      <button class="card option" data-path="code"><h3>I want help with coding</h3><p class="muted">Debug faster, understand deeper, and stay sharp.</p></button>
+      <button class="card option" data-path="research"><h3>I want to research safely</h3><p class="muted">Find sources you can actually cite — not invented ones.</p></button>
+      <button class="card option" data-path="risks"><h3>I want to understand AI risks</h3><p class="muted">Use AI without losing your privacy, ethics, or grades.</p></button>
+    </div>
+    <section>
+      <div class="card path-detail" id="path-study">
+        <h2>I want to study smarter</h2>
+        <p class="muted">Use AI as a personal tutor — without skipping the learning.</p>
+        <div class="grid grid-3">
+          <div><h3>Recommended tools</h3><div class="chips" style="justify-content:flex-start"><span class="chip">ChatGPT</span><span class="chip">Claude</span><span class="chip">Gemini</span></div></div>
+          <div><h3>Top tips</h3><ul class="check-list"><li>Ask AI to explain concepts in 3 levels: simple, medium, deep.</li><li>Always summarize what you learned — in your own words — back to the AI.</li><li>Use AI to make flashcards, not to memorize answers.</li></ul></div>
+          <div><h3>Starter prompts</h3><div class="prompt">Explain [topic] in 3 levels: like I&#x27;m 12, like a 1st-year student, like an expert.</div><div class="prompt">Quiz me on [chapter]. One question at a time. Tell me if I&#x27;m right and why.</div><div class="prompt">Turn these notes into 15 flashcards (Q + short A): …</div></div>
+        </div>
+        <p><a class="link-more" href="use-cases.html">Open prompt library &rarr;</a></p>
+      </div>
+      <div class="card path-detail" id="path-code" style="display:none">
+        <h2>I want help with coding</h2>
+        <p class="muted">Debug faster, understand deeper, and stay sharp.</p>
+        <div class="grid grid-3">
+          <div><h3>Recommended tools</h3><div class="chips" style="justify-content:flex-start"><span class="chip">ChatGPT</span><span class="chip">Claude</span><span class="chip">GitHub Copilot</span><span class="chip">Cursor</span></div></div>
+          <div><h3>Top tips</h3><ul class="check-list"><li>Paste the exact error message and the smallest piece of code that reproduces it.</li><li>Ask for an explanation of the fix — not just the fixed code.</li><li>Re-type the solution yourself so you actually learn it.</li></ul></div>
+          <div><h3>Starter prompts</h3><div class="prompt">Help me debug this code. Explain the bug step by step. Don&#x27;t rewrite unless needed: …</div><div class="prompt">I&#x27;m getting this error: &#x27;&lt;paste&gt;&#x27;. Explain what it means and 3 things to check first.</div><div class="prompt">Review my function for edge cases and suggest 5 test inputs: …</div></div>
+        </div>
+        <p><a class="link-more" href="use-cases.html">Open prompt library &rarr;</a></p>
+      </div>
+      <div class="card path-detail" id="path-research" style="display:none">
+        <h2>I want to research safely</h2>
+        <p class="muted">Find sources you can actually cite — not invented ones.</p>
+        <div class="grid grid-3">
+          <div><h3>Recommended tools</h3><div class="chips" style="justify-content:flex-start"><span class="chip">Perplexity</span><span class="chip">Gemini</span><span class="chip">Claude</span></div></div>
+          <div><h3>Top tips</h3><ul class="check-list"><li>Use AI search tools that show their sources, then open every link.</li><li>Never cite a paper you haven&#x27;t seen with your own eyes.</li><li>Use AI to understand papers, not to replace reading them.</li></ul></div>
+          <div><h3>Starter prompts</h3><div class="prompt">Find 5 peer-reviewed sources on [topic] from the last 5 years. Give links and a one-line summary each.</div><div class="prompt">Summarize this paper: problem, method, results, limitations. Paper: …</div><div class="prompt">What are the main open debates in [field]? Who are the key researchers on each side?</div></div>
+        </div>
+        <p><a class="link-more" href="use-cases.html">Open prompt library &rarr;</a></p>
+      </div>
+      <div class="card path-detail" id="path-risks" style="display:none">
+        <h2>I want to understand AI risks</h2>
+        <p class="muted">Use AI without losing your privacy, ethics, or grades.</p>
+        <div class="grid grid-3">
+          <div><h3>Recommended tools</h3><div class="chips" style="justify-content:flex-start"><span class="chip">Any tool — used carefully</span></div></div>
+          <div><h3>Top tips</h3><ul class="check-list"><li>Check your course&#x27;s AI policy before every assignment.</li><li>Never paste IDs, passwords, medical info, or unpublished research.</li><li>Treat confident answers as claims to verify, not facts.</li></ul></div>
+          <div><h3>Starter prompts</h3><div class="prompt">What are the most common ways an AI answer about [topic] could be wrong?</div><div class="prompt">Here is my AI-assisted draft. Which parts would my professor consider my own work?</div><div class="prompt">Remove all personal information from this text before I use it: …</div></div>
+        </div>
+        <p><a class="link-more" href="use-cases.html">Open prompt library &rarr;</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>AI Campus Navigator — a student survival guide to LLMs.</p>
+      <p>Built with HTML, CSS &amp; JavaScript in VS Code · Hosted on GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.querySelectorAll("[data-path]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".path-detail").forEach((d) => (d.style.display = "none"));
+        document.getElementById("path-" + btn.dataset.path).style.display = "";
+        document.querySelectorAll("[data-path]").forEach((b) => b.classList.remove("correct"));
+        btn.classList.add("correct");
+      });
+    });
+    document.querySelector("[data-path]").classList.add("correct");
+  </script>
+</body>
+</html>

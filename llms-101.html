@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LLMs 101 — AI Campus Navigator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">&#9906;</span>
+        <span><strong>AI Campus Navigator</strong><small>Student survival guide to LLMs</small></span>
+      </a>
+      <button class="menu-btn" aria-label="Open menu">&#9776;</button>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="journey.html">Journey</a>
+        <a href="prompt-battle.html">Prompts</a>
+        <a href="ethics.html">Ethics</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="compare.html">Compare</a>
+        <a href="survival-kit.html" class="dark">Survival Kit</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-head">
+      <span class="eyebrow">Station 1 · Start here</span>
+      <h1>LLMs 101</h1>
+      <p class="lead">The 10 core ideas every student should know — in plain language, with university examples.</p>
+    </section>
+    <div class="grid grid-2">
+      <div class="card"><div class="num">1</div><h3>LLM (Large Language Model)</h3><p>A computer program trained on huge amounts of text that learns to predict the next word. That&#x27;s how it can chat, summarize, and explain.</p><div class="example"><strong>Example:</strong> Like a very well-read study buddy who has skimmed millions of books — helpful, but not always right.</div></div>
+      <div class="card"><div class="num">2</div><h3>Generative AI</h3><p>AI that creates new content (text, images, code, audio) instead of just classifying or searching.</p><div class="example"><strong>Example:</strong> Asking it to draft an email, generate a diagram idea, or write a poem about Fourier transforms.</div></div>
+      <div class="card"><div class="num">3</div><h3>Chatbot</h3><p>The conversational interface you talk to. The chatbot is the front door; the LLM is the brain behind it.</p><div class="example"><strong>Example:</strong> ChatGPT is the chatbot, GPT is the underlying model.</div></div>
+      <div class="card"><div class="num">4</div><h3>Prompt</h3><p>What you type to the AI. Better prompts = better answers.</p><div class="example"><strong>Example:</strong> “Explain TCP handshake to a 2nd-year CS student in 5 bullet points.”</div></div>
+      <div class="card"><div class="num">5</div><h3>Output</h3><p>What the AI gives back: text, code, an image, etc.</p><div class="example"><strong>Example:</strong> A summary of your lecture notes, or a debugged version of your C function.</div></div>
+      <div class="card"><div class="num">6</div><h3>Tokens</h3><p>The chunks of text the model reads and writes. Roughly 1 token ≈ ¾ of a word in English.</p><div class="example"><strong>Example:</strong> A 500-word essay is about 700 tokens. Limits on free plans are often counted in tokens.</div></div>
+      <div class="card"><div class="num">7</div><h3>Training</h3><p>The process of teaching the model by showing it billions of text examples. Training stops at a certain date — that&#x27;s the “knowledge cutoff”.</p><div class="example"><strong>Example:</strong> If a model was trained until early 2024, it won&#x27;t know about things from later — unless it can browse the web.</div></div>
+      <div class="card"><div class="num">8</div><h3>Context</h3><p>Everything the model can “see” at once: your prompt + previous messages + uploaded files. Bigger context = it can handle longer documents.</p><div class="example"><strong>Example:</strong> Pasting a full PDF chapter and asking for a summary uses a lot of context.</div></div>
+      <div class="card"><div class="num">9</div><h3>Multimodal AI</h3><p>AI that handles more than text — images, audio, video, files.</p><div class="example"><strong>Example:</strong> Snap a photo of a circuit diagram and ask the AI to explain it.</div></div>
+      <div class="card"><div class="num">10</div><h3>Hallucinations</h3><p>When the AI confidently makes things up — fake citations, wrong formulas, invented facts.</p><div class="example"><strong>Example:</strong> It might invent an author or a paper that doesn&#x27;t exist. Always verify important claims.</div></div>
+    </div>
+    <section><div class="buttons"><a class="btn primary" href="journey.html">Next station: Study Smarter &rarr;</a></div></section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>AI Campus Navigator — a student survival guide to LLMs.</p>
+      <p>Built with HTML, CSS &amp; JavaScript in VS Code · Hosted on GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

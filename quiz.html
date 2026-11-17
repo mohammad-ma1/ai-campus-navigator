@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tool Finder Quiz — AI Campus Navigator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">&#9906;</span>
+        <span><strong>AI Campus Navigator</strong><small>Student survival guide to LLMs</small></span>
+      </a>
+      <button class="menu-btn" aria-label="Open menu">&#9776;</button>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="journey.html">Journey</a>
+        <a href="prompt-battle.html">Prompts</a>
+        <a href="ethics.html">Ethics</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="compare.html">Compare</a>
+        <a href="survival-kit.html" class="dark">Survival Kit</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-head">
+      <span class="eyebrow">Tool Finder Quiz</span>
+      <h1>What's your <span class="grad-text">AI study personality?</span></h1>
+      <p class="lead">6 quick questions reveal the AI sidekick that fits how you learn.</p>
+    </section>
+    <div class="card game" id="quiz">
+      <div class="game-top"><span id="q-num"></span><span id="q-pct"></span></div>
+      <div class="progress"><div id="bar"></div></div>
+      <h2 id="q-text" style="font-size:24px"></h2>
+      <div class="options" id="q-options"></div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>AI Campus Navigator — a student survival guide to LLMs.</p>
+      <p>Built with HTML, CSS &amp; JavaScript in VS Code · Hosted on GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Each answer adds a point to one personality
+    const QUESTIONS = [
+      { q: "What do you mainly want to do with AI?",
+        a: [["Understand things faster", "study"], ["Find solid information", "research"], ["Write or fix code", "code"], ["Create something new", "creative"]] },
+      { q: "Before an exam, you usually…",
+        a: [["Want someone to quiz me", "study"], ["Look for extra sources", "research"], ["Solve coding exercises", "code"], ["Make mind maps and visuals", "creative"]] },
+      { q: "When an AI gives you an answer, you…",
+        a: [["Ask it to explain more simply", "study"], ["Check where it came from", "research"], ["Run it and test it", "code"], ["Double-check it's safe and allowed", "safety"]] },
+      { q: "Your favorite type of assignment is…",
+        a: [["Problem sets", "study"], ["Literature reviews", "research"], ["Programming projects", "code"], ["Design or open-ended projects", "creative"]] },
+      { q: "What worries you most about AI?",
+        a: [["Learning less", "study"], ["Wrong or fake facts", "research"], ["Buggy code", "code"], ["Privacy and cheating rules", "safety"]] },
+      { q: "Pick a superpower:",
+        a: [["Perfect memory", "study"], ["Knowing every source", "research"], ["Writing bug-free code", "code"], ["Never being fooled", "safety"]] }
+    ];
+    const RESULTS = {
+      study:    { name: "Study Partner", desc: "You use AI as a patient tutor: explanations, quizzes and flashcards.", tools: "ChatGPT, Claude, Gemini" },
+      research: { name: "Research Explorer", desc: "You want trustworthy information and real sources you can cite.", tools: "Perplexity, Gemini, Claude" },
+      code:     { name: "Coding Assistant", desc: "You learn by building — debugging, refactoring and shipping code.", tools: "GitHub Copilot, Cursor, Claude, Replit" },
+      creative: { name: "Creativity Booster", desc: "You use AI to brainstorm, prototype and turn ideas into things.", tools: "ChatGPT, Lovable, Bolt" },
+      safety:   { name: "Safety Checker", desc: "You care about privacy, ethics and getting things right.", tools: "Your university's approved tool, local Llama / Mistral" }
+    };
+    let current = 0;
+    const points = { study: 0, research: 0, code: 0, creative: 0, safety: 0 };
+
+    function render() {
+      const item = QUESTIONS[current];
+      const pct = Math.round((current / QUESTIONS.length) * 100);
+      document.getElementById("q-num").textContent = "Question " + (current + 1) + " of " + QUESTIONS.length;
+      document.getElementById("q-pct").textContent = pct + "%";
+      document.getElementById("bar").style.width = pct + "%";
+      document.getElementById("q-text").textContent = item.q;
+      const box = document.getElementById("q-options");
+      box.innerHTML = "";
+      item.a.forEach(([label, type]) => {
+        const btn = document.createElement("button");
+        btn.className = "option";
+        btn.textContent = label;
+        btn.onclick = () => { points[type]++; current++; current < QUESTIONS.length ? render() : showResult(); };
+        box.appendChild(btn);
+      });
+    }
+
+    function showResult() {
+      const best = Object.keys(points).reduce((a, b) => (points[b] > points[a] ? b : a));
+      const r = RESULTS[best];
+      document.getElementById("quiz").innerHTML =
+        "<div class='progress'><div style='width:100%'></div></div>" +
+        "<span class='eyebrow'>Your AI personality</span>" +
+        "<h2 class='grad-text'>" + r.name + "</h2>" +
+        "<p>" + r.desc + "</p>" +
+        "<p><strong>Try these tools:</strong> " + r.tools + "</p>" +
+        "<div class='buttons'><a class='btn primary' href='quiz.html'>Retake quiz</a><a class='btn' href='choose.html'>Tool decision guide →</a></div>";
+    }
+    render();
+  </script>
+</body>
+</html>

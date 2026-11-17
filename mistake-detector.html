@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spot the AI Mistake — AI Campus Navigator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">&#9906;</span>
+        <span><strong>AI Campus Navigator</strong><small>Student survival guide to LLMs</small></span>
+      </a>
+      <button class="menu-btn" aria-label="Open menu">&#9776;</button>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="journey.html">Journey</a>
+        <a href="prompt-battle.html">Prompts</a>
+        <a href="ethics.html">Ethics</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="compare.html">Compare</a>
+        <a href="survival-kit.html" class="dark">Survival Kit</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-head">
+      <span class="eyebrow">Interactive</span>
+      <h1>Can You Spot the <span class="grad-text">AI Mistake?</span></h1>
+      <p class="lead">Read each AI answer. Identify the problem. Sharpen your AI-detective instincts.</p>
+    </section>
+    <div class="card game" id="game">
+      <div class="game-top"><span id="case-num"></span><span id="score"></span></div>
+      <div class="bubble user"><div class="station-label">STUDENT ASKED</div><p id="question"></p></div>
+      <div class="bubble ai"><div class="station-label">AI ANSWERED</div><p id="answer"></p></div>
+      <h3>What's the problem?</h3>
+      <div class="options" id="options"></div>
+      <div class="feedback" id="feedback"></div>
+      <div class="buttons" style="justify-content:flex-end"><button class="btn primary" id="next" style="display:none">Next case &rarr;</button></div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>AI Campus Navigator — a student survival guide to LLMs.</p>
+      <p>Built with HTML, CSS &amp; JavaScript in VS Code · Hosted on GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    const OPTIONS = ["Hallucinated fact", "Missing source", "Too vague", "Overconfident", "Privacy risk"];
+    const CASES = [
+      { q: "Who invented the transistor?",
+        a: "The transistor was invented in 1947 by John Bardeen, Walter Brattain, and Albert Einstein at Bell Labs.",
+        correct: "Hallucinated fact",
+        why: "Einstein had nothing to do with it — the third inventor was William Shockley. A real fact mixed with a fake one is a classic hallucination." },
+      { q: "Give me a recent study showing that sleep improves exam scores.",
+        a: "Studies show that students who sleep more get better grades. Research clearly supports this.",
+        correct: "Missing source",
+        why: "No author, journal, or year — you can't cite 'studies show'. Ask for a specific paper and check that it exists." },
+      { q: "How should I prepare for my Data Structures final?",
+        a: "Study hard, review the material, and practice. Good luck!",
+        correct: "Too vague",
+        why: "Nothing actionable. A better prompt (topics, time, weak areas) would get a real plan." },
+      { q: "Is this circuit safe to plug into 230V mains?",
+        a: "Yes, this circuit is 100% safe. You can plug it in without any risk.",
+        correct: "Overconfident",
+        why: "The AI can't see your real circuit, yet it gives an absolute guarantee about something dangerous. Always verify safety-critical answers with a human expert." },
+      { q: "Here is my full name, ID number and home address — write my scholarship letter.",
+        a: "Sure! Here is your letter including your ID number 3xxxxxxx and address…",
+        correct: "Privacy risk",
+        why: "The student pasted sensitive personal data. Use placeholders like [NAME] and [ID] and fill them in yourself." },
+      { q: "What is the time complexity of binary search?",
+        a: "Binary search runs in O(n²) time because it compares every pair of elements.",
+        correct: "Hallucinated fact",
+        why: "Binary search is O(log n). The answer sounds technical but is simply wrong — check against your course notes." }
+    ];
+    let i = 0, score = 0;
+    const $ = (id) => document.getElementById(id);
+
+    function showCase() {
+      const c = CASES[i];
+      $("case-num").textContent = "Case " + (i + 1) + " of " + CASES.length;
+      $("score").textContent = "Score: " + score;
+      $("question").textContent = c.q;
+      $("answer").textContent = c.a;
+      $("feedback").style.display = "none";
+      $("next").style.display = "none";
+      $("options").innerHTML = "";
+      OPTIONS.forEach((opt) => {
+        const btn = document.createElement("button");
+        btn.className = "option";
+        btn.textContent = opt;
+        btn.onclick = () => choose(btn, opt);
+        $("options").appendChild(btn);
+      });
+    }
+
+    function choose(btn, opt) {
+      const c = CASES[i];
+      document.querySelectorAll(".option").forEach((b) => {
+        b.disabled = true;
+        if (b.textContent === c.correct) b.classList.add("correct");
+      });
+      if (opt === c.correct) score++; else btn.classList.add("wrong");
+      $("score").textContent = "Score: " + score;
+      $("feedback").innerHTML = (opt === c.correct ? "<strong>Correct!</strong> " : "<strong>Not quite.</strong> ") + c.why;
+      $("feedback").style.display = "block";
+      $("next").textContent = i < CASES.length - 1 ? "Next case →" : "See result →";
+      $("next").style.display = "inline-flex";
+    }
+
+    $("next").onclick = () => {
+      i++;
+      if (i < CASES.length) return showCase();
+      $("game").innerHTML = "<h2>You scored " + score + " / " + CASES.length + "</h2>" +
+        "<p class='muted'>" + (score >= 5 ? "Excellent AI radar! You're hard to fool." : "Good start — remember: verify facts, demand sources, and protect your data.") + "</p>" +
+        "<div class='buttons'><a class='btn primary' href='mistake-detector.html'>Play again</a><a class='btn' href='privacy-meter.html'>Next station →</a></div>";
+    };
+    showCase();
+  </script>
+</body>
+</html>
